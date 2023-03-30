@@ -1,0 +1,47 @@
+<div class="container">
+    <h3 class="d-flex justify-content-center">Real time Balance of Account</h3>
+    <h5 class="d-flex justify-content-center">This page refreshes every 1 minute</h5>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ATAfrica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button routerLink="dashboard" class="m-1 btn btn-light btn-outline-primary">Dashboard</button>                
+              </li>
+              <li class="nav-item">
+                <button routerLink="accountinfo" class="m-1 btn btn-light btn-outline-primary">Account Info</button> 
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</div>
+
+<div class="continer">
+  <h3 class="d-flex justify-content-center">Real time Balance of Account</h3>
+<p>Challenges</p>
+<ul>
+  <li>To login simultaneously was difficult as i always have to manually log the accounts in the terminal, before i can get data so my idea of using multithreading was difficult.Usually if the terminal doesn't need me to log in directly Multithreading would have made it easy to get data from all accounts in real time
+  My solution was to write a script which polled data from the server and send to mongodb and from there i polled data to the application while i had to manually connect the accouunts. 
+  </li>
+  <li>All demo accounts i was provided were new users and had no balance, equity hence the idea of getting historical data was bad.</li>
+  <li>Having carefully read about the MetTrader5 platform, the broker should be the one to provide symbols they trade in. The accounts didn't have symbols so was unable to retrieve historicl data with the mt5.copy_from_range() endpoint</li>
+
+  <li>Deploying to the cloud ws quite chllenging as MetaTrader 5 works only on Windows and the terminal needs to be running, in my scenario, three accounts meaning three terminals i believe.</li>
+  <li>As i could not get through in real time, I created a timestamp for each data that was polled so i could sort by time and date to ensure the latest parameters shows on top</li>
+  <li>I am able to poll data from my local system and update in realtime while exposing the app via ngrok.This is possible as i use a windows system and the MetaTrader5 platform is already installed</li>
+  <li>The account info page is to display all data per accounts and if you look you will see ll data is null except for the account that comes with the metatrader platform </li>
+  <li>Payment cards has expired. So could not create an app on Heroku</li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

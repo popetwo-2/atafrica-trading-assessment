@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Login</th>
+          <th>Equity</th>
+          <th>Balance</th>
+          <th>Currency</th>
+          <th>Leverage</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let dataItem of accountList">
+          <td>{{dataItem.login}}</td>
+          <td>{{dataItem.equity}}</td>
+          <td>{{dataItem.balance}}</td>
+          <td>{{dataItem.currency}}</td>
+          <td>
+            {{dataItem.leverage}}
+          </td>
+      </tr>
+  </tbody>
+</table>
