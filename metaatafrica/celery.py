@@ -11,13 +11,13 @@ app.autodiscover_tasks()
 
 app.conf.timezone = 'Africa/Lagos'
 
-app.conf.beat_schedule = {
-    'run-me-every-minute':
-        {
-            'task': 'tasks.get_data_every_minute',
-            'schedule': crontab(minute=1),
-        }
-}
+#   app.conf.beat_schedule = {
+#       'run-me-every-minute':
+#           {
+#               'task': 'tasks.get_data_every_minute',
+#               'schedule': crontab(minute=1),
+#           }
+#   }
 
 
 @app.task(bind=True)
