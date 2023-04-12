@@ -1,0 +1,14 @@
+
+{
+    "builds": [{
+        "src": "metaatafrica/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "metaatafrica/wsgi.py"
+        }
+    ]
+}
