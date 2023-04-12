@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container">
+    <p>I was unable to connect to Three terminals simultaneously. despite trying with python threading module</p>
+<p>The primary challenge was the condition of logging in the account as i had to go into the terminal to login manually which means doing that thrice</p>
+<p>Three accounts meant three metatrader terminals on system.</p>
+<p>All the accounts were new users and had 0 balance, equity.</p>
+<p> The broker under which the accounts were opened didn't have a symbol which meant i was unable to get historical data for each account based on symbols</p>
+<p>I got the data to mongodb by writing a script which picks the balance nd equity every minute.</p>
+<p>I am more comfortble Backend than Frontend</p>
+<p>Deploying the app to Linux environment is difficult as the supported platform is Windows. It makes tasks difficult to run background as Linux doesn't support the MetaTrader5</p>
+</div>
+
+{% endblock %}

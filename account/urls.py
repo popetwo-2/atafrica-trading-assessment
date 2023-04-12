@@ -21,5 +21,6 @@ urlpatterns = [
     path('accountinfo/', views.GetAccountInfo, name='home'),
     path('single_info/<int:login>/', views.get_account_info_single, name='single'),
     path('', views.home, name='index'),
-    path('dashboard/', views.dashboard, name='dashboard')
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('challenges/', views.challenge, name='challenge')
 ]
