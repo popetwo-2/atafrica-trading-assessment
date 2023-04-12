@@ -1,14 +1,14 @@
 
 {
     "builds": [{
-        "src": "metaaatafrica/wsgi.py",
+        "src": "metaatafrica/wsgi.py",
         "use": "@ardnt/vercel-python-wsgi",
         "config": { "maxLambdaSize": "15mb" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "metaaatafrica/wsgi.py"
+            "dest": "metaatafrica/wsgi.py"
         }
     ]
 }
