@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h4 class="text text-center text-secondary pb-4">Polling Units</h4>
+<div class="row ">
+    <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card text-center">
+            <div class="card-header">
+               Account Login
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{1.login}}</h5>
+                <p class="card-text">Balance is <a href="#" class="btn btn-primary">{{1.balance}}</a></p>
+                <p>Equity is : <a href="#" class="btn btn-primary">{{1.equity}}</a></p>
+            </div>
+            <div class="card-footer text-body-secondary">
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card text-center">
+            <div class="card-header">
+                Account Login
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{2.login}}</h5>
+                <p class="card-text">Balance is <a href="#" class="btn btn-primary">{{2.balance}}</a></p>
+                <p>Equity is : <a href="#" class="btn btn-primary">{{2.equity}}</a></p>
+            </div>
+            <div class="card-footer text-body-secondary">
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card text-center">
+            <div class="card-header">
+                Account Login
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{3.login}}</h5>
+                <p class="card-text">Balance is <a href="#" class="btn btn-primary">{{3.balance}}</a></p>
+                <p>Equity is : <a href="#" class="btn btn-primary">{{3.equity}}</a></p>
+            </div>
+            <div class="card-footer text-body-secondary">
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
